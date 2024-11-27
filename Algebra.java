@@ -152,8 +152,8 @@ public class Algebra {
 					return i;
 				}
 				i++ ;
-					if ()
 			}
 		}
+		return 0;
 	}	  	  
 }
