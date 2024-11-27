@@ -27,9 +27,15 @@ public class Algebra {
 	public static int plus(int x1, int x2) {
 		int variable1 = x1; 
 		int variable2 = x2; 
-		for (int i = 0; i < variable2; i++ ){
+		if (variable2 >= 0){
+			for (int i = 0; i < variable2; i++ ){
 			variable1 ++;
 		}
+	}
+				else {
+				variable1 = minus(variable1, variable2);	
+				}
+
 		return variable1;
 	}
 
@@ -37,9 +43,14 @@ public class Algebra {
 	public static int minus(int x1, int x2) {
 		int variable1 = x1; 
 		int variable2 = x2; 
-		for (int i = 0; i < variable2; i++){
+		if (variable2 >= 0){
+			for (int i = 0; i < variable2; i++){
 			variable1 --;
 		}
+	}
+				else {
+					variable1 = plus(variable1, variable2);
+				}
 		return variable1;
 	}
 
@@ -141,8 +152,8 @@ public class Algebra {
 					return i;
 				}
 				i++ ;
+					if ()
 			}
 		}
-		return 0;
 	}	  	  
 }
