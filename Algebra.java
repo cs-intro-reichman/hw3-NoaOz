@@ -118,6 +118,7 @@ public class Algebra {
 
 			else {
 				for (int i = 1; i < n; i++) {
+				x = absolute(x);
 				variable = minus(variable, x);
 				}
 				return variable;	
