@@ -90,6 +90,8 @@ public class Algebra {
 
 	// Returns x^n (for n >= 0)
 	public static int pow(int x, int n) {
+		int variable = x ;
+
 		if (x == 0 && n == 0) {
 			return (int)Double.NaN;
 		}
@@ -108,7 +110,6 @@ public class Algebra {
 		if (x < 0){
 			if (mod(n, 2) == 0){
 			x = absolute(x);
-			int variable = x ;
 			for (int i = 1; i < n; i++) {
 			variable = times(variable, x);
 			}
@@ -116,7 +117,6 @@ public class Algebra {
 			}
 
 			else {
-				int variable = x ;
 				for (int i = 1; i < n; i++) {
 				variable = minus(variable, x);
 				}
@@ -126,7 +126,6 @@ public class Algebra {
 			}
 
 			else {
-				int variable = x ;
 				for (int i = 1; i < n; i++) {
 				variable = times(variable, x);
 				}
@@ -136,6 +135,8 @@ public class Algebra {
 
 	// Returns the integer part of x1 / x2 
 	public static int div(int x1, int x2) {
+		int variable1 = absolute(x1);
+		int variable2 = absolute(x2);
 		int counter = 0;
 
 		if (x2 == 0) {
@@ -151,8 +152,6 @@ public class Algebra {
 		}
 
 		if ((x1 > 0 && x2 > 0) || (x1 <0 && x2 <0)) {
-			int variable1 = absolute(x1);
-			int variable2 = absolute(x2);
 			while (variable1 > 0){
 				variable1 = minus(variable1, variable2);
 				if (variable1 >= 0){
@@ -163,8 +162,6 @@ public class Algebra {
 		}
 
 		else {
-			int variable1 = absolute(x1);
-			int variable2 = absolute(x2);
 			while (variable1 > 0){
 				variable1 = minus(variable1, variable2);
 				if (variable1 >= 0){
