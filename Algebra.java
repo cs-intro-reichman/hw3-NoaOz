@@ -91,47 +91,32 @@ public class Algebra {
 	// Returns x^n (for n >= 0)
 	public static int pow(int x, int n) {
 		int variable = x ;
+		if (x == 0) {
+			return 0;
+		}
+
+		if (n == 1) {
+			return x;
+		}
 
 		if (x == 0 && n == 0) {
 			return (int)Double.NaN;
 		}
-		if (x == 0) {
-			return 0;
-		}
-		if (n == 1) {
-			return x;
-		}
-		if (n == 0) {
-			return 1;
-		}
-		if (x == 1) {
-			return 1;
-		}
-		if (x < 0){
-			if (mod(n, 2) == 0){
-			x = absolute(x);
-			for (int i = 1; i < n; i++) {
-			variable = times(variable, x);
-			}
-			return variable;	
-			}
-
-			else {
-				for (int i = 1; i < n; i++) {
+		if (x>0 || x<0 && mod(n, 2) == 0){
+			if (x<0) {
 				x = absolute(x);
-				variable = minus(variable, x);
-				}
-				return variable;	
-	
-				}
 			}
-
-			else {
-				for (int i = 1; i < n; i++) {
+			for (int i = 1; i<n; i++){
 				variable = times(variable, x);
-				}
-				return variable;	
-				}
+			}
+		}
+		else {
+			for (int i = 1; i<n; i++) {
+				variable = times(variable, absolute(x));
+			}
+		}
+		return variable;
+
 	}
 
 	// Returns the integer part of x1 / x2 
