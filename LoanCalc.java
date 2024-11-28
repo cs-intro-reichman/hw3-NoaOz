@@ -78,19 +78,17 @@ public class LoanCalc {
 			if (balance > epsilon) {
 				lo = mid;
 			}
-			if (balance < -epsilon) {
+			else if (balance < -epsilon) {
 					hi = mid;
 				}
-
 			else {
 
 				return mid;
-
-				}
-				iterationCounter ++;
 			}
+				iterationCounter ++;
+		}
 		
-		return (lo + hi) / 2;
+		return ((lo + hi) /2);
     }
 
 }
