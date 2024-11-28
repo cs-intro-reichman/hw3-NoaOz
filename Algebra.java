@@ -29,7 +29,7 @@ public class Algebra {
 			return x1; 
 		}
 			else {
-				for (int i = x1; i < 0; x1++){
+				for (int i = x1; i < 0; i++){
 				positive++;
 			}
 			return positive;
