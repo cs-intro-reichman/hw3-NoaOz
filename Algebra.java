@@ -67,22 +67,22 @@ public class Algebra {
 	public static int times(int x1, int x2) {
 		int multiplication = 0;
 		if (x1 == 0 || x2 ==0) {
-			return 0;
+			return 0; 
 		}
-			if (x2 == 1) {
+		if (x2 == 1) {
 			return x1;
 		}
-				if (x1 > 0 && x2 > 0 || x1 < 0 && x2 < 0) {
-					for (int i = 0; i < absolute(x2); i++){
-					multiplication = plus(multiplication, absolute(x1));
-					}
-					return multiplication;
+			if (x1 > 0 && x2 > 0 || x1 < 0 && x2 < 0) {
+				for (int i = 0; i < absolute(x2); i++){
+				multiplication = plus(multiplication, absolute(x1));
 				}
-						else {
-							for (int i = 0; i < absolute(x2); i++){
-								multiplication = minus(multiplication, absolute(x1));
-								}
-								return multiplication;
+				return multiplication;
+			}
+					else {
+						for (int i = 0; i < absolute(x2); i++){
+						multiplication = minus(multiplication, absolute(x1));
+						}
+							return multiplication;
 						}
 
 		}
