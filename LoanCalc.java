@@ -46,9 +46,11 @@ public class LoanCalc {
 		double increment = epsilon;
 		while (true) {
 			double balance =endBalance(loan, rate, n, pay);
+
 				if (balance <= 0){
 					break;
 				}
+				
 				pay = pay + increment;
 				iterationCounter ++;
 		}
