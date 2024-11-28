@@ -69,8 +69,8 @@ public class Anagram {
 		int random = 0;
 		String str2 = "";
 		String check = str; 
-		for (int i = 0; i < str.length(); i++){
-			random = i + (int) (Math.random() * (check.length()-i));
+		for (int i = 0; i < str.length()-1; i++){
+			random = i + (int) (Math.random() * (str.length()-i));
 			str2 = str2 + str.charAt(random);
 			check = "";
 			for (int j = 0; j < str.length(); j++){
@@ -79,6 +79,7 @@ public class Anagram {
 
 				}
 			}
+			str = check;
 			
 		}
 		return str2;
