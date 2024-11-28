@@ -73,7 +73,7 @@ public class Anagram {
 		String pre = "";
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
-			if (ch >= 97 && ch <= 122 && ch == 32){
+			if ((ch >= 97 && ch <= 122) || ch == 32){
 				pre = pre + ch ;
 			}
 		}
