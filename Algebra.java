@@ -98,6 +98,9 @@ public class Algebra {
 		if (n == 1) {
 			return x;
 		}
+		if (n == 0) {
+		return 1;
+		}
 
 		if (x == 0 && n == 0) {
 			return (int)Double.NaN;
