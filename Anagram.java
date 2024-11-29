@@ -74,12 +74,12 @@ public class Anagram {
 		}
 		return pre2;
 	} 
-	
+
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
         String randomStr = "";
-        int random = (int)(Math.random()*str.length());
+        int random = (int)(Math.random()*str.length() -1);
         char ch =str.charAt(random);
         for (int i=0;i<str.length();i++) {
             if (str.charAt(i) != ch) {
