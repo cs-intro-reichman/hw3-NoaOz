@@ -28,41 +28,24 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
-		str1 = preProcess(str1);
-		str2 = preProcess(str2);
-		String check = "";
-		String newstr1 = ""; 
-		String newstr2 = "";
-
-		for (int i=0; i<str1.length(); i++){ // remove spaces
-			if (str1.charAt(i) != 32){
-				newstr1 = newstr1 + str1.charAt(i);; 
-			}
+		if (str1 == "" && str2 == "") {
+			return true;
 		}
-		
-		for (int i=0; i<str2.length(); i++){  // remove spaces
-			if (str2.charAt(i) != 32){
-				newstr1 = newstr2 + str2.charAt(i); 
-			}
-		}
-
-		
-		if (newstr1.length() != newstr2.length()) {
-			return false;
-		}
-
+		String newstr1 = preProcess(str1);
+		String newstr2 = preProcess(str2);
+		boolean check = false;
 		for (int i = 0; i < newstr1.length(); i++){
-			for(int j = 0 ; j < newstr2.length(); j++){
-					if (newstr1.charAt(i) == newstr2.charAt(j)){
-					check = check + newstr1.charAt(i);
-					break;
+			for (int j =0; j < newstr2.length(); j++){
+				if (newstr1.charAt(i)==newstr2.charAt(j)){
+					check = true;
 				}
 			}
+			if (check==false){
+				return false;
+			}
+	
 		}
-		if (check.length() == newstr1.length()){
-			return true; 
-		}
-		return false;
+		return check;
 	}
 	   
 	// Returns a preprocessed version of the given string: all the letter characters are converted
