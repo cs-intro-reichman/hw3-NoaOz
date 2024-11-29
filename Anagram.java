@@ -74,6 +74,7 @@ public class Anagram {
 		}
 		return pre2;
 	} 
+	
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
