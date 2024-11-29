@@ -82,7 +82,7 @@ public class Anagram {
 		if (str == randomStr) {
 			return str;
 		}
-        int random = (int)(Math.random()*str.length()-1);
+        int random = (int)(Math.random()*str.length());
         char ch =str.charAt(random);
         for (int i=0;i<str.length();i++) {
             if (str.charAt(i) != ch) {
