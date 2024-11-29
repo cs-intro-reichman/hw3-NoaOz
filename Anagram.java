@@ -31,8 +31,8 @@ public class Anagram {
 		if (str1 == "" && str2 == "") {
 			return true;
 		}
-		String newstr1 = preProcess(str1);
-		String newstr2 = preProcess(str2);
+		String newstr1 = preProcess2(str1);
+		String newstr2 = preProcess2(str2);
 		boolean check = false;
 		for (int i = 0; i < newstr1.length(); i++){
 			for (int j =0; j < newstr2.length(); j++){
@@ -62,7 +62,18 @@ public class Anagram {
 		}
 		return pre;
 	} 
-	   
+	  
+	public static String preProcess2(String str) {
+		str = preProcess(str); 
+		String pre2 = "";
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (ch != 32){
+				pre2 = pre2 + ch ;
+			}
+		}
+		return pre2;
+	} 
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
