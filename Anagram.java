@@ -50,18 +50,16 @@ public class Anagram {
 		if (newstr1.length() != newstr2.length()) {
 			return false;
 		}
-		
+
 		for (int i = 0; i < newstr1.length(); i++){
 			for(int j = 0 ; j < newstr2.length(); j++){
-				{
 					if (newstr1.charAt(i) == newstr2.charAt(j)){
 					check = check + newstr1.charAt(i);
 					break;
 				}
 			}
-			}
 		}
-		if (check.length() == newstr2.length()){
+		if (check.length() == newstr1.length()){
 			return true; 
 		}
 		return false;
