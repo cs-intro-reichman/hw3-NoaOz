@@ -78,12 +78,14 @@ public class Anagram {
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
         String randomString = "";
-        int randomNum = (int)(Math.random()*str.length());
-        char ch =str.charAt(randomNum);
-        for (int i=0;i<str.length();i++) {
+        int randomNum = (int)(Math.random()*str.length()-1);
+        char ch = str.charAt(randomNum);
+        for (int i=0 ; i<str.length() ; i++) {
+
             if (str.charAt(i) != ch) {
                 randomString = randomString + str.charAt(i);
             }
+			
         }
         randomString = randomString + ch;
         return randomString;
